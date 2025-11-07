@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1067089165176088952}
   - component: {fileID: 695240710690238558}
   - component: {fileID: 6652593360574121585}
-  - component: {fileID: 4236409807312077121}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -155,8 +154,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: d4fe63ccfda9db9499b30da2254e92c8, type: 3}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 8300000, guid: ee464f298957a0742b5dd2b9e105d433, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
@@ -241,19 +240,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4236409807312077121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3979140927449115990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8b7c440e25a8f48aebd84855775051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  sceneToOpen: PlanetClick_Earth
 --- !u!1 &9068723816321352327
 GameObject:
   m_ObjectHideFlags: 0

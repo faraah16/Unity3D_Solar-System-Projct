@@ -273,7 +273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Close Panel '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -707,7 +707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -96}
+  m_AnchoredPosition: {x: 461, y: 25}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978761128
@@ -753,7 +753,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 978761129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1221946695}
+        m_TargetAssemblyTypeName: PlanetUIPanel, Assembly-CSharp
+        m_MethodName: ToggleSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &978761129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,8 +819,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6652593360574121585, guid: 831c8891e72724a4eb548548709afa95,
         type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652593360574121585, guid: 831c8891e72724a4eb548548709afa95,
+        type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652593360574121585, guid: 831c8891e72724a4eb548548709afa95,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652593360574121585, guid: 831c8891e72724a4eb548548709afa95,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652593360574121585, guid: 831c8891e72724a4eb548548709afa95,
+        type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: ee464f298957a0742b5dd2b9e105d433, type: 3}
+    - target: {fileID: 6652593360574121585, guid: 831c8891e72724a4eb548548709afa95,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7299887750083418006, guid: 831c8891e72724a4eb548548709afa95,
         type: 3}
@@ -860,7 +897,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4236409807312077121, guid: 831c8891e72724a4eb548548709afa95, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -898,12 +936,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91df1be80eca74895be5c47a1853f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetUIPanel
-  data: {fileID: 0}
-  planetAudio: {fileID: 0}
-  playButtonLabel: {fileID: 0}
-  infoPanel: {fileID: 0}
-  titleText: {fileID: 0}
-  bodyText: {fileID: 0}
+  data: {fileID: 11400000, guid: 5b46656968bc3a148b315cfca6caaade, type: 2}
+  planetAudio: {fileID: 1964920712}
+  playButtonLabel: {fileID: 1983907737}
+  infoPanel: {fileID: 942579359}
+  titleText: {fileID: 172282391}
+  bodyText: {fileID: 1302260006}
 --- !u!4 &1221946696
 Transform:
   m_ObjectHideFlags: 0
@@ -1038,15 +1076,15 @@ RectTransform:
   m_GameObject: {fileID: 1302260004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6819, y: 0.6819, z: 0.6819}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 942579360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -36}
+  m_SizeDelta: {x: 500, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1302260006
 MonoBehaviour:
@@ -1068,7 +1106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1102,8 +1140,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1251,7 +1289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 455, y: -162}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450302026
@@ -1297,7 +1335,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1450302027}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1221946695}
+        m_TargetAssemblyTypeName: PlanetUIPanel, Assembly-CSharp
+        m_MethodName: HideInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1450302027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,7 +1422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 457, y: 114}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513665217
@@ -1418,7 +1468,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1513665218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1221946695}
+        m_TargetAssemblyTypeName: PlanetUIPanel, Assembly-CSharp
+        m_MethodName: ShowInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1513665218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1469,7 +1531,7 @@ GameObject:
   - component: {fileID: 1624617035}
   - component: {fileID: 1624617034}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Learn More
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1605,7 +1667,7 @@ GameObject:
   - component: {fileID: 1658791298}
   - component: {fileID: 1658791297}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Go Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1765,7 +1827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 92}
+  m_AnchoredPosition: {x: 454, y: -83}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696880447
@@ -1884,6 +1946,12 @@ MonoBehaviour:
   moon: {fileID: 0}
   moonOrbitSpeed: 20
   moonOrbitRadius: 2
+--- !u!82 &1964920712 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6652593360574121585, guid: 831c8891e72724a4eb548548709afa95,
+    type: 3}
+  m_PrefabInstance: {fileID: 1025219545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1983907735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,7 +1964,7 @@ GameObject:
   - component: {fileID: 1983907738}
   - component: {fileID: 1983907737}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: 'Earth''s Sound '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

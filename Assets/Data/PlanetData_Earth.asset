@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9df2937d091ea4fad886d003cd4054, type: 3}
+  m_Name: PlanetData_Earth
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetData
+  displayName: THE EARTH
+  description: 'Earth is a unique planet, the third from the Sun, and the only known
+    location of life. It features vast oceans covering 71% of its surface and a dynamic
+    atmosphere that supports diverse climates and weather patterns.
+
+'
+  audioClip: {fileID: 8300000, guid: ee464f298957a0742b5dd2b9e105d433, type: 3}
+  detailSceneName: EarthDetail
