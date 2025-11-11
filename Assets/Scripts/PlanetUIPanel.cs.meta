@@ -1,2 +1,17 @@
 fileFormatVersion: 2
 guid: 6d91df1be80eca74895be5c47a1853f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - data: {fileID: 11400000, guid: 5b46656968bc3a148b315cfca6caaade, type: 2}
+  - planetAudio: {instanceID: 0}
+  - playButtonLabel: {instanceID: 0}
+  - infoPanel: {instanceID: 0}
+  - titleText: {instanceID: 0}
+  - bodyText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

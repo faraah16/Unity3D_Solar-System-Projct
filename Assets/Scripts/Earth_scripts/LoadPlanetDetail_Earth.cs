@@ -5,35 +5,30 @@ using UnityEngine.EventSystems;
 public class LoadPlanetDetail : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] string sceneToOpen = "EarthDetail";
-    private void StopAllAudioHard()
+     [SerializeField] AudioSource dronehum;
+
+    private static void StopAllAudioHard()
     {
-        // Stoppe toutes les AudioSources
-        foreach (var src in FindObjectsOfType<AudioSource>(true))
+        // New API (Unity 2023/Unity 6):
+        foreach (var src in UnityEngine.Object.FindObjectsByType<AudioSource>(
+                     FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
             src.Stop();
+        }
 
-
-
-        // Met en pause globale (sécurité pendant le chargement)
+        // Pause global audio until the next scene unpauses it
         AudioListener.pause = true;
     }
 
-    // PC/Editor : clic souris direct sur le collider
-    private void OnMouseDown()
-    {
-        OpenDetail();
-    }
+    private void OnMouseDown() => OpenDetail();
 
-    // Appel commun (servira aussi en VR plus tard)
     public void OpenDetail()
     {
-        StopAllAudioHard();                 // <<< coupe tout ici
+        StopAllAudioHard();
+        if (dronehum) dronehum.Stop(); 
         if (!string.IsNullOrEmpty(sceneToOpen))
             SceneManager.LoadScene(sceneToOpen);
     }
 
-    // Utile si tu ajoutes un Physics Raycaster/UI (facultatif)
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        OpenDetail();
-    }
+    public void OnPointerClick(PointerEventData eventData) => OpenDetail();
 }

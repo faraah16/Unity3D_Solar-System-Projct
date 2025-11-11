@@ -11,5 +11,29 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EarthDetail.unity
     guid: a56f8e53ceba2f54f9959b1193b6211c
+  - enabled: 1
+    path: Assets/Scenes/SunDetail.unity
+    guid: bac27f6ccb86aad4983604ef383d85db
+  - enabled: 1
+    path: Assets/Scenes/UranusDetail.unity
+    guid: 3a46d4a62461da545a2151ae01a5d757
+  - enabled: 1
+    path: Assets/Scenes/SaturnDetail.unity
+    guid: 9fcc71b4988a6fa42b6b569acf6c59cb
+  - enabled: 1
+    path: Assets/Scenes/NaptuneDetail.unity
+    guid: ee4c72e6c8c3d3a42a97c85fb5ade104
+  - enabled: 1
+    path: Assets/Scenes/MercuryDetail.unity
+    guid: 5e885efc83c7d7f4fbf4168b1bdc53ac
+  - enabled: 1
+    path: Assets/Scenes/MarsDetail.unity
+    guid: 9b876d168a90b54448b392bd96e9760b
+  - enabled: 1
+    path: Assets/Scenes/JupiterDetail.unity
+    guid: 86cb8bd4b04026e438598b4e37f4036a
+  - enabled: 1
+    path: Assets/Scenes/VenusDetail.unity
+    guid: 4f9a32afd0ed645479c1451169772fb9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

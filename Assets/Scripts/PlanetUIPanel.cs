@@ -8,86 +8,89 @@ public class PlanetUIPanel : MonoBehaviour
     [SerializeField] private PlanetData data;
 
     [Header("Scene/Audio refs")]
-    [SerializeField] private AudioSource planetAudio;    // AudioSource sur la planète
-    [SerializeField] private TMP_Text playButtonLabel;   // Texte du bouton Play/Pause
+    [SerializeField] private AudioSource planetAudio;      
+    [SerializeField] private TMP_Text playButtonLabel;     
 
     [Header("Info Panel refs")]
     [SerializeField] private GameObject infoPanel;
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text bodyText;
 
-    private const string SolarSystemSceneName = "SolarSystem"; // ⚠️ pas "Solar System"
+    private const string SolarSystemSceneName = "Solar System"; 
 
-    // --- Désactive l'info panel avant tout ---
     private void Awake()
     {
+        // 🔇 1. Couper le son d'ambiance du système solaire
+        if (MusicManager.I != null)
+            MusicManager.I.StopMusicImmediate();
+
+        // 🔕 2. Cacher le panneau info et désactiver lecture auto
         if (infoPanel != null) infoPanel.SetActive(false);
+        if (planetAudio != null) planetAudio.playOnAwake = false;
     }
 
     private void Start()
     {
-        AudioListener.pause = false;        // <<< on réactive l'écoute
-        if (planetAudio) planetAudio.playOnAwake = false;
-
         ApplyData();
         UpdatePlayLabel();
     }
 
-
-    // ---------- API réutilisable ----------
-    public void SetData(PlanetData newData)
-    {
-        data = newData;
-        ApplyData();
-    }
-
-    public void SetPlanetAudio(AudioSource newAudio)
-    {
-        planetAudio = newAudio;
-        if (data != null && data.audioClip && planetAudio)
-            planetAudio.clip = data.audioClip;
-        UpdatePlayLabel();
-    }
-
-    // --- Bouton: Retour ---
+    // --- Bouton Retour ---
     public void GoBack()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Solar System");    
+        SceneManager.LoadScene(SolarSystemSceneName);
     }
 
-    // --- Bouton: Son ---
+    // --- Bouton Earth Sound ---
     public void ToggleSound()
     {
         if (!planetAudio) { Debug.LogWarning("PlanetUIPanel: planetAudio manquant."); return; }
+
+        // s’assurer qu’on est bien en audio actif
+        AudioListener.pause = false;
+
+        // garantir que l’ambiance globale est coupée
+        if (MusicManager.I != null) MusicManager.I.StopMusicImmediate();
+
+        // charger le bon clip si nécessaire
+        if ((!planetAudio.clip || planetAudio.clip == null) && data && data.audioClip)
+            planetAudio.clip = data.audioClip;
+
+        // sécurités
+        planetAudio.mute = false;
+        planetAudio.volume = Mathf.Max(0.001f, planetAudio.volume);
+        planetAudio.spatialBlend = 0f; // 2D pour tester
+
+        if (planetAudio.clip == null)
+        {
+            Debug.LogWarning("PlanetUIPanel: aucun clip assigné (ni via PlanetData, ni sur l'AudioSource).");
+            return;
+        }
+
         if (planetAudio.isPlaying) planetAudio.Pause();
-        else planetAudio.Play();
+        else                      planetAudio.Play();
+
         UpdatePlayLabel();
     }
 
-    // --- Boutons: Infos ---
-    public void ShowInfo()
-    {
-        if (infoPanel) infoPanel.SetActive(true);
-        else Debug.LogWarning("PlanetUIPanel: infoPanel non assigné.");
-    }
 
-    public void HideInfo()
-    {
-        if (infoPanel) infoPanel.SetActive(false);
-    }
+    // --- Boutons Infos ---
+    public void ShowInfo() { if (infoPanel) infoPanel.SetActive(true); }
+    public void HideInfo() { if (infoPanel) infoPanel.SetActive(false); }
 
-    // ---------- Helpers ----------
+    // --- Helpers ---
     private void ApplyData()
     {
-        
-        if (data == null) return;
+        if (!data) return;
 
         if (titleText) titleText.text = string.IsNullOrEmpty(data.displayName) ? "Planet" : data.displayName;
-        if (bodyText)  bodyText.text  = string.IsNullOrEmpty(data.description) ? "no description." : data.description;
+        if (bodyText) bodyText.text = string.IsNullOrEmpty(data.description) ? "no description." : data.description;
 
-        if (planetAudio && data.audioClip){
-            planetAudio.Stop();  
-            planetAudio.clip = data.audioClip;}
+        if (planetAudio)
+        {
+            planetAudio.Stop();
+            if (data.audioClip) planetAudio.clip = data.audioClip;
+        }
     }
 
     private void UpdatePlayLabel()
