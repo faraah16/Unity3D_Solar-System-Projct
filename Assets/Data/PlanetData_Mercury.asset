@@ -16,5 +16,5 @@ MonoBehaviour:
   description: Planet Mercury, the closest and smallest planet to the Sun, is not
     the hottest; that title goes to Venus, as Mercury lacks an atmosphere to retain
     heat.
-  audioClip: {fileID: 0}
-  detailSceneName: 
+  audioClip: {fileID: 8300000, guid: 3e09462718bea014b866446674cf8e72, type: 3}
+  detailSceneName: MercuryDetail

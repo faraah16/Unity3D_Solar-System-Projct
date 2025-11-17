@@ -806,7 +806,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -5.8207654e-11, y: -0.0000000037252899, z: -9.3132246e-10,
     w: 1}
-  m_LocalPosition: {x: 2.29, y: 0, z: -3.14}
+  m_LocalPosition: {x: 0.37, y: -0, z: -5.98}
   m_LocalScale: {x: 1, y: 1.0313, z: 10.193229}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1648,8 +1648,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6530247997888713315, guid: 10bbc3400b3017c4e9fa02a1184c09f5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 180891775416476075}
   m_SourcePrefab: {fileID: 100100000, guid: 10bbc3400b3017c4e9fa02a1184c09f5, type: 3}
+--- !u!1 &180891775416476074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6530247997888713315, guid: 10bbc3400b3017c4e9fa02a1184c09f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 180891775416476073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &180891775416476075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180891775416476074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec4adb433f93d24a912e380215309ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadPlanetDetail
+  sceneToOpen: UranusDetail
+  dronehum: {fileID: 0}
 --- !u!1001 &573813752575647883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1808,8 +1832,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8103147868575565217, guid: 0199f932d220623458ac8446a849e5bc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2365794623540922428}
   m_SourcePrefab: {fileID: 100100000, guid: 0199f932d220623458ac8446a849e5bc, type: 3}
+--- !u!1 &2365794623540922427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8103147868575565217, guid: 0199f932d220623458ac8446a849e5bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2365794623540922426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2365794623540922428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365794623540922427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec4adb433f93d24a912e380215309ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadPlanetDetail
+  sceneToOpen: SaturnDetail
+  dronehum: {fileID: 0}
 --- !u!1001 &3586537006501266766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2055,8 +2103,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7239686713725807153, guid: b3f62d470f3859147a1b240a298475b4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5061138505591388088}
   m_SourcePrefab: {fileID: 100100000, guid: b3f62d470f3859147a1b240a298475b4, type: 3}
+--- !u!1 &5061138505591388087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7239686713725807153, guid: b3f62d470f3859147a1b240a298475b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 5061138505591388086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5061138505591388088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061138505591388087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec4adb433f93d24a912e380215309ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadPlanetDetail
+  sceneToOpen: NaptuneDetail
+  dronehum: {fileID: 0}
 --- !u!1001 &8739794124139968604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2226,8 +2298,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5016479772457939325, guid: b974f88630a318b4f944956f1440a13b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9137892025193614000}
   m_SourcePrefab: {fileID: 100100000, guid: b974f88630a318b4f944956f1440a13b, type: 3}
+--- !u!1 &9137892025193613999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5016479772457939325, guid: b974f88630a318b4f944956f1440a13b,
+    type: 3}
+  m_PrefabInstance: {fileID: 9137892025193613998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9137892025193614000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137892025193613999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec4adb433f93d24a912e380215309ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadPlanetDetail
+  sceneToOpen: VenusDetail
+  dronehum: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
